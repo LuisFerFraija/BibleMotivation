@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BCB4902E2E0B9B6400213664 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB4902D2E0B9B6300213664 /* WidgetKit.framework */; };
+		BCB490302E0B9B6400213664 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCB4902F2E0B9B6400213664 /* SwiftUI.framework */; };
+		BCB490412E0B9B6600213664 /* BibleMotivation10WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BCB4902B2E0B9B6300213664 /* BibleMotivation10WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		BCB4900B2E0B935300213664 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,17 +27,62 @@
 			remoteGlobalIDString = BCB48FFC2E0B935000213664;
 			remoteInfo = BibleMotivation10;
 		};
+		BCB4903F2E0B9B6600213664 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BCB48FF52E0B935000213664 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BCB4902A2E0B9B6300213664;
+			remoteInfo = BibleMotivation10WidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BCB490462E0B9B6600213664 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BCB490412E0B9B6600213664 /* BibleMotivation10WidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BCB48FFD2E0B935000213664 /* BibleMotivation10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BibleMotivation10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB4900A2E0B935300213664 /* BibleMotivation10Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BibleMotivation10Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB490142E0B935300213664 /* BibleMotivation10UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BibleMotivation10UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCB4902B2E0B9B6300213664 /* BibleMotivation10WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BibleMotivation10WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCB4902D2E0B9B6300213664 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		BCB4902F2E0B9B6400213664 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BC9043A72E0D60B500485B6A /* Exceptions for "BibleMotivation10" folder in "BibleMotivation10WidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				BibleVerse.swift,
+				VerseRepository.swift,
+			);
+			target = BCB4902A2E0B9B6300213664 /* BibleMotivation10WidgetExtension */;
+		};
+		BCB490422E0B9B6600213664 /* Exceptions for "BibleMotivation10Widget" folder in "BibleMotivation10WidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BCB4902A2E0B9B6300213664 /* BibleMotivation10WidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BCB48FFF2E0B935000213664 /* BibleMotivation10 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BC9043A72E0D60B500485B6A /* Exceptions for "BibleMotivation10" folder in "BibleMotivation10WidgetExtension" target */,
+			);
 			path = BibleMotivation10;
 			sourceTree = "<group>";
 		};
@@ -43,6 +94,14 @@
 		BCB490172E0B935300213664 /* BibleMotivation10UITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = BibleMotivation10UITests;
+			sourceTree = "<group>";
+		};
+		BCB490312E0B9B6400213664 /* BibleMotivation10Widget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BCB490422E0B9B6600213664 /* Exceptions for "BibleMotivation10Widget" folder in "BibleMotivation10WidgetExtension" target */,
+			);
+			path = BibleMotivation10Widget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +128,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BCB490282E0B9B6300213664 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCB490302E0B9B6400213664 /* SwiftUI.framework in Frameworks */,
+				BCB4902E2E0B9B6400213664 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +146,8 @@
 				BCB48FFF2E0B935000213664 /* BibleMotivation10 */,
 				BCB4900D2E0B935300213664 /* BibleMotivation10Tests */,
 				BCB490172E0B935300213664 /* BibleMotivation10UITests */,
+				BCB490312E0B9B6400213664 /* BibleMotivation10Widget */,
+				BCB4902C2E0B9B6300213664 /* Frameworks */,
 				BCB48FFE2E0B935000213664 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +158,18 @@
 				BCB48FFD2E0B935000213664 /* BibleMotivation10.app */,
 				BCB4900A2E0B935300213664 /* BibleMotivation10Tests.xctest */,
 				BCB490142E0B935300213664 /* BibleMotivation10UITests.xctest */,
+				BCB4902B2E0B9B6300213664 /* BibleMotivation10WidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BCB4902C2E0B9B6300213664 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCB4902D2E0B9B6300213664 /* WidgetKit.framework */,
+				BCB4902F2E0B9B6400213664 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +182,12 @@
 				BCB48FF92E0B935000213664 /* Sources */,
 				BCB48FFA2E0B935000213664 /* Frameworks */,
 				BCB48FFB2E0B935000213664 /* Resources */,
+				BCB490462E0B9B6600213664 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BCB490402E0B9B6600213664 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				BCB48FFF2E0B935000213664 /* BibleMotivation10 */,
@@ -163,6 +245,28 @@
 			productReference = BCB490142E0B935300213664 /* BibleMotivation10UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		BCB4902A2E0B9B6300213664 /* BibleMotivation10WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCB490432E0B9B6600213664 /* Build configuration list for PBXNativeTarget "BibleMotivation10WidgetExtension" */;
+			buildPhases = (
+				BCB490272E0B9B6300213664 /* Sources */,
+				BCB490282E0B9B6300213664 /* Frameworks */,
+				BCB490292E0B9B6300213664 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BCB490312E0B9B6400213664 /* BibleMotivation10Widget */,
+			);
+			name = BibleMotivation10WidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = BibleMotivation10WidgetExtension;
+			productReference = BCB4902B2E0B9B6300213664 /* BibleMotivation10WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +288,9 @@
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = BCB48FFC2E0B935000213664;
 					};
+					BCB4902A2E0B9B6300213664 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 				};
 			};
 			buildConfigurationList = BCB48FF82E0B935000213664 /* Build configuration list for PBXProject "BibleMotivation10" */;
@@ -203,6 +310,7 @@
 				BCB48FFC2E0B935000213664 /* BibleMotivation10 */,
 				BCB490092E0B935300213664 /* BibleMotivation10Tests */,
 				BCB490132E0B935300213664 /* BibleMotivation10UITests */,
+				BCB4902A2E0B9B6300213664 /* BibleMotivation10WidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +331,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BCB490122E0B935300213664 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCB490292E0B9B6300213664 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +368,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BCB490272E0B9B6300213664 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +387,11 @@
 			isa = PBXTargetDependency;
 			target = BCB48FFC2E0B935000213664 /* BibleMotivation10 */;
 			targetProxy = BCB490152E0B935300213664 /* PBXContainerItemProxy */;
+		};
+		BCB490402E0B9B6600213664 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BCB4902A2E0B9B6300213664 /* BibleMotivation10WidgetExtension */;
+			targetProxy = BCB4903F2E0B9B6600213664 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -518,6 +645,62 @@
 			};
 			name = Release;
 		};
+		BCB490442E0B9B6600213664 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CS6C6KTH3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BibleMotivation10Widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BibleMotivation10Widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tekwor.BibleMotivation10.BibleMotivation10Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BCB490452E0B9B6600213664 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CS6C6KTH3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BibleMotivation10Widget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BibleMotivation10Widget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tekwor.BibleMotivation10.BibleMotivation10Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,6 +736,15 @@
 			buildConfigurations = (
 				BCB490252E0B935300213664 /* Debug */,
 				BCB490262E0B935300213664 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCB490432E0B9B6600213664 /* Build configuration list for PBXNativeTarget "BibleMotivation10WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCB490442E0B9B6600213664 /* Debug */,
+				BCB490452E0B9B6600213664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
