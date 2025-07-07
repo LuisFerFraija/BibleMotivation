@@ -25,7 +25,8 @@ struct BibleWidgetEntryView: View {
                     .foregroundColor(.secondary)
             }
             .padding()
-            .containerBackground(Color.cyan, for: family)
+            .containerBackground(.fill, for: .widget)
+
 
         case .systemMedium:
             HStack {
