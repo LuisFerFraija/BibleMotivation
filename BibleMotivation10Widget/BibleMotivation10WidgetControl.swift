@@ -5,15 +5,9 @@
 //  Created by Luis Fernando on 6/24/25.
 //
 
-import AppIntents
+/*import AppIntents
 import SwiftUI
 import WidgetKit
-
-@available(iOSApplicationExtension 18.0, *)
-struct BibleMotivation10WidgetControl: ControlWidget {
-  // tu código actual…
-}
-
 
 
 struct BibleMotivation10WidgetControl: ControlWidget {
@@ -82,3 +76,4 @@ struct StartTimerIntent: SetValueIntent {
         return .result()
     }
 }
+*/

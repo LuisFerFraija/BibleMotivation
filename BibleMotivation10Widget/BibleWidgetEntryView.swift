@@ -25,8 +25,7 @@ struct BibleWidgetEntryView: View {
                     .foregroundColor(.secondary)
             }
             .padding()
-            .containerBackground(.fill, for: .widget)
-
+            .containerBackground(.fill, for: .widget) // ✅ corregido
 
         case .systemMedium:
             HStack {
@@ -47,7 +46,7 @@ struct BibleWidgetEntryView: View {
                 }
             }
             .padding()
-            .containerBackground(Color.cyan, for: family)
+            .containerBackground(.fill, for: .widget) // ✅ corregido
 
         case .systemLarge:
             VStack(alignment: .leading, spacing: 10) {
@@ -66,7 +65,7 @@ struct BibleWidgetEntryView: View {
                 Spacer()
             }
             .padding()
-            .containerBackground(Color.cyan, for: family)
+            .containerBackground(.fill, for: .widget) // ✅ corregido
 
         default:
             Text("Tamaño no soportado")

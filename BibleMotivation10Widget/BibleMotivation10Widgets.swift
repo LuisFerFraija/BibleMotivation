@@ -1,17 +1,11 @@
 //
 //  BibleMotivation10Widgets.swift
-//  BibleMotivation10
-//
-//  Created by Luis Fernando on 6/26/25.
-//
-
-//
-//  BibleMotivation10Widgets.swift
 //  BibleMotivation10Widget
 //
 //  Agrupa el widget estático (iOS 15+) y el de control (iOS 18+).
 //
 
+/*
 import WidgetKit
 import SwiftUI
 
@@ -28,3 +22,5 @@ struct BibleMotivation10Widgets: WidgetBundle {
         }
     }
 }
+*/
+
