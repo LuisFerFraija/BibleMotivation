@@ -1,6 +1,6 @@
 //
 //  BibleWidgetEntryView.swift
-//  BibleMotivation10
+//  BibleMotivation10Widget
 //
 //  Created by Luis Fernando on 6/24/25.
 //
@@ -12,9 +12,9 @@ struct BibleWidgetEntryView: View {
     var entry: SimpleEntry
     @Environment(\.widgetFamily) var family
 
+    @ViewBuilder
     var body: some View {
-        switch family {
-        case .systemSmall:
+        if family == .systemSmall {
             VStack(spacing: 6) {
                 Text(entry.verse.shortText)
                     .font(.headline)
@@ -25,9 +25,9 @@ struct BibleWidgetEntryView: View {
                     .foregroundColor(.secondary)
             }
             .padding()
-            .containerBackground(.fill, for: .widget) // ✅ corregido
+            .containerBackground(.fill, for: .widget)
 
-        case .systemMedium:
+        } else if family == .systemMedium {
             HStack {
                 Image("fortaleza")
                     .resizable()
@@ -46,29 +46,38 @@ struct BibleWidgetEntryView: View {
                 }
             }
             .padding()
-            .containerBackground(.fill, for: .widget) // ✅ corregido
+            .containerBackground(.fill, for: .widget)
 
-        case .systemLarge:
-            VStack(alignment: .leading, spacing: 10) {
-                Text("Versículo del día")
-                    .font(.title3)
-                    .bold()
+        } else if family == .systemLarge {
+            ZStack {
+                Image("fortaleza")
+                    .resizable()
+                    .scaledToFill()
+                    .clipped()
 
-                Text(entry.verse.text)
-                    .font(.title3)
-                    .lineLimit(5)
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Versículo del día")
+                        .font(.title3)
+                        .bold()
+                        .foregroundColor(.white)
 
-                Text(entry.verse.reference)
-                    .font(.caption)
-                    .foregroundColor(.secondary)
+                    Text(entry.verse.text)
+                        .font(.title3)
+                        .lineLimit(5)
+                        .foregroundColor(.white)
 
-                Spacer()
+                    Text(entry.verse.reference)
+                        .font(.caption)
+                        .foregroundColor(.white.opacity(0.8))
+
+                    Spacer()
+                }
+                .padding()
             }
-            .padding()
-            .containerBackground(.fill, for: .widget) // ✅ corregido
+            .containerBackground(.fill, for: .widget)
 
-        default:
-            Text("Tamaño no soportado")
+        } else {
+            EmptyView() // Para cualquier otro tamaño futuro
         }
     }
 }

@@ -63,6 +63,7 @@
 		BC9043A72E0D60B500485B6A /* Exceptions for "BibleMotivation10" folder in "BibleMotivation10WidgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Assets.xcassets,
 				BibleVerse.swift,
 				VerseRepository.swift,
 			);

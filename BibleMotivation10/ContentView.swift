@@ -17,6 +17,14 @@ struct ContentView: View {
                 .frame(height: 120)
                 .overlay(
                     VStack {
+                        
+                        Image("fortaleza")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: .infinity, maxHeight: 300)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .shadow(radius: 10)
+                        
                         Text("\"\(currentVerse.text)\"")
                             .font(.headline)
                             .multilineTextAlignment(.center)
