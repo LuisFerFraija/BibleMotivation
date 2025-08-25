@@ -12,30 +12,46 @@ struct ContentView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            RoundedRectangle(cornerRadius: 20)
-                .fill(Color.purple)
-                .frame(height: 120)
-                .overlay(
-                    VStack {
-                        
-                        Image("fortaleza")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(maxWidth: .infinity, maxHeight: 300)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                            .shadow(radius: 10)
-                        
-                        Text("\"\(currentVerse.text)\"")
-                            .font(.headline)
-                            .multilineTextAlignment(.center)
-                            .padding(.bottom, 4)
+            ZStack {
+                // Primera capa (recuadro externo)
+                RoundedRectangle(cornerRadius: 30)
+                    .fill(Color.purple.opacity(0.4))
+                    .shadow(radius: 8)
+                    .frame(maxWidth: .infinity, maxHeight: 420)
 
-                        Text(currentVerse.reference)
-                            .font(.title3)
-                            .bold()
+                // Segunda capa (recuadro interno)
+                RoundedRectangle(cornerRadius: 25)
+                    .fill(Color(.systemGray6))
+                    .frame(maxWidth: .infinity, maxHeight: 400)
+                    .padding(10)
+
+                // Contenido
+                VStack {
+                    Image("fortaleza")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: .infinity, maxHeight: 200)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .shadow(radius: 10)
+                        .padding(.horizontal)
+
+                    ScrollView {
+                        Text(currentVerse.text)
+                            .font(.title2)
+                            .multilineTextAlignment(.center)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .padding()
                     }
-                )
-                .padding(.horizontal)
+
+                    Text(currentVerse.reference)
+                        .font(.title3)
+                        .bold()
+                        .padding(.bottom, 8)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .padding()
+            }
+            .padding(.horizontal)
 
             Button("Nuevo versículo") {
                 currentVerse = VerseRepository.randomVerse()
@@ -51,3 +67,4 @@ struct ContentView: View {
         .ignoresSafeArea()
     }
 }
+
